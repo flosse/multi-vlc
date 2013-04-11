@@ -1,0 +1,24 @@
+{
+  "name": "multi-vlc",
+  "version": "0.0.1",
+  "description": "Control multiple VLC instances with only one web interface",
+  "main": "lib/server.js",
+  "dependencies": {
+    "express": "~3.1.1"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flosse/multi-vlc"
+  },
+  "keywords": [
+    "vlc",
+    "rc",
+    "remote",
+    "control"
+  ],
+  "author": "Markus Kohlhase",
+  "license": "MIT"
+}

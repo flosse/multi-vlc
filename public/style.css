@@ -1,0 +1,11 @@
+html {
+  font-family: sans-serif;
+}
+
+button {
+  width: 7em;
+  font-size: 2em;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: bold;
+}
