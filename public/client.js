@@ -5,7 +5,7 @@
   runCmd = function(cmd) {
     var req;
 
-    req = $.get('/' + cmd);
+    req = $.get('/player/' + cmd);
     req.success(function() {
       return console.log(cmd + " was called");
     });
@@ -15,6 +15,8 @@
   };
 
   $(document).ready(function() {
+    var req;
+
     $("#pause").click(function() {
       return runCmd('pause');
     });
@@ -24,8 +26,20 @@
     $("#next").click(function() {
       return runCmd('next');
     });
-    return $("#prev").click(function() {
+    $("#prev").click(function() {
       return runCmd('prev');
+    });
+    req = $.getJSON('/clients/*');
+    return req.success(function(clients) {
+      var c, ul, _i, _len, _results;
+
+      ul = $("#clients");
+      _results = [];
+      for (_i = 0, _len = clients.length; _i < _len; _i++) {
+        c = clients[_i];
+        _results.push(ul.append("<li>" + c.host + ":" + c.port + "</li>"));
+      }
+      return _results;
     });
   });
 

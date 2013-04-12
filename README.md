@@ -1,6 +1,7 @@
 # multi-vlc
 
-Control multiple VLC instances with only one web interface.
+Control multiple [VLC](http://videolan.org) instances with only one web
+interface.
 
 ## Usage
 
@@ -16,8 +17,8 @@ To run multiple instances on one host you can define different ports:
 vlc --extraintf --http-port 8080
 vlc --extraintf --http-port 8081
 vlc --extraintf --http-port 8082
-
 ```
+
 ### Start the server
 
 Write all your clients into `clients.js`, e.g:
